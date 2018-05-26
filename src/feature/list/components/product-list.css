@@ -6,7 +6,7 @@
   margin: 1.5rem;
 }
   .ProductList__Item {
-    background: rgb(194, 192, 187) url('/assets/cellphone.svg') no-repeat center center;
+    background: rgb(194, 192, 187) url('../../../assets/cellphone.svg') no-repeat center center;
     background-size: 2.5rem;
     cursor: pointer;
     display: inline-flex;
