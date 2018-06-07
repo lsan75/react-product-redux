@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProductList should match the snapshot 1`] = `
+<ProductList
+  productList={
+    Array [
+      Object {
+        "name": "aaa",
+        "price": 10,
+        "selected": true,
+      },
+      Object {
+        "name": "bbb",
+        "price": 20,
+        "selected": false,
+      },
+      Object {
+        "name": "ccc",
+        "price": 50,
+      },
+    ]
+  }
+  selectProduct={[MockFunction]}
+>
+  <ul
+    className="ProductList"
+  >
+    <li
+      className="ProductList__Item selected"
+      key="aaa"
+      onClick={[Function]}
+    >
+      <strong
+        className="ProductList__Item__Name"
+      >
+        aaa
+      </strong>
+      <span
+        className="ProductList__Item__Price"
+      >
+        10
+        €
+      </span>
+    </li>
+    <li
+      className="ProductList__Item "
+      key="bbb"
+      onClick={[Function]}
+    >
+      <strong
+        className="ProductList__Item__Name"
+      >
+        bbb
+      </strong>
+      <span
+        className="ProductList__Item__Price"
+      >
+        20
+        €
+      </span>
+    </li>
+    <li
+      className="ProductList__Item "
+      key="ccc"
+      onClick={[Function]}
+    >
+      <strong
+        className="ProductList__Item__Name"
+      >
+        ccc
+      </strong>
+      <span
+        className="ProductList__Item__Price"
+      >
+        50
+        €
+      </span>
+    </li>
+  </ul>
+</ProductList>
+`;

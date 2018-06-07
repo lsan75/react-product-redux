@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AppList renders without crashing 1`] = `
+<AppList
+  getProducts={[Function]}
+  productList={
+    Array [
+      Object {
+        "name": "aaa",
+        "price": 10,
+        "selected": true,
+      },
+      Object {
+        "name": "bbb",
+        "price": 20,
+        "selected": false,
+      },
+      Object {
+        "name": "ccc",
+        "price": 50,
+      },
+    ]
+  }
+  selectProduct={[Function]}
+/>
+`;
