@@ -7,7 +7,7 @@ import { mountToJson } from 'enzyme-to-json'
 
 import { IProps, ProductList } from './product-list'
 
-import { productList } from '../helpers'
+import { productList } from '../../../mocks/helpers'
 
 describe('ProductList', () => {
   configure({ adapter: new Adapter() })

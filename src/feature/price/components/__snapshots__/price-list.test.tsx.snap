@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PriceHeader should render 1`] = `
+<ul
+  className="PriceList"
+>
+  <li
+    className="PriceList__Item"
+    key="aaa"
+  >
+    <strong
+      className="PriceList__Item__Name"
+    >
+      aaa
+    </strong>
+    <span
+      className="PriceList__Item__Price"
+    >
+      10
+       €
+    </span>
+  </li>
+  <li
+    className="PriceList__Item"
+    key="bbb"
+  >
+    <strong
+      className="PriceList__Item__Name"
+    >
+      bbb
+    </strong>
+    <span
+      className="PriceList__Item__Price"
+    >
+      20
+       €
+    </span>
+  </li>
+  <li
+    className="PriceList__Item"
+    key="ccc"
+  >
+    <strong
+      className="PriceList__Item__Name"
+    >
+      ccc
+    </strong>
+    <span
+      className="PriceList__Item__Price"
+    >
+      50
+       €
+    </span>
+  </li>
+</ul>
+`;

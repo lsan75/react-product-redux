@@ -1,35 +1,35 @@
 import { productReducer } from './product.reducer'
 
-import { defaultProductState, IProduct } from './product'
+import { defaultProductState } from './product'
 import { PRODUCT_ACTION } from './product.action'
 
-describe('productReducer', () => {
+import { productList } from '../../mocks/helpers'
 
-  const product: IProduct = {
-    name: 'hop',
-    price: 10,
-    selected: false
-  }
+describe('productReducer', () => {
 
   it('should get products', () => {
 
     const result = productReducer(defaultProductState, {
-      productList: [ product ],
+      productList,
       type: PRODUCT_ACTION.GET_PRODUCTS
     })
 
-    expect(result).toEqual({ ...defaultProductState, productList: [ product ]})
+    expect(result).toEqual({ ...defaultProductState, productList})
   })
 
   it('should select a product', () => {
-    const productState = { ...defaultProductState, productList: [ product ] }
+    const productState = { ...defaultProductState, productList }
     const result = productReducer(productState, {
-      product,
+      product: {
+        name: 'bbb',
+        price: 20,
+        selected: false
+      },
       type: PRODUCT_ACTION.SELECT_PRODUCT
     })
 
-    expect(result.productList[0].selected).toBe(true)
-    expect(result.totalPrice).toBe(10)
+    expect(result.productList[1].selected).toBe(true)
+    expect(result.totalPrice).toBe(30)
   })
 
   it('should do nothing', () => {

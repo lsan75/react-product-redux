@@ -5,12 +5,12 @@ import * as Adapter from 'enzyme-adapter-react-16'
 
 import { configure, mount, ReactWrapper, shallow, ShallowRendererProps, ShallowWrapper } from 'enzyme'
 
-import { shallowToJson } from 'enzyme-to-json'
+import { mountToJson, shallowToJson } from 'enzyme-to-json'
 
 import { Provider } from 'react-redux'
 import thunk from 'redux-thunk'
 
-import ConnectedContainer, { IProps } from './app-list'
+import ConnectedContainer, { IProps } from './app-price'
 
 import { productList } from '../../mocks/helpers'
 
@@ -22,14 +22,14 @@ describe('AppList', () => {
   const store = mockStore({
     productReducer: {
       productList,
-      totalPrice: 0
+      totalPrice: 10
     }
   })
   const props: ShallowRendererProps = {
     context: { store }
   }
-  let reactOutput: ReactWrapper<IProps>
   let shallowOutput: ShallowWrapper<IProps>
+  let reactOutput: ReactWrapper<IProps>
 
 
   beforeEach(() => {
@@ -55,21 +55,13 @@ describe('AppList', () => {
     const innerProps: IProps = shallowOutput.props()
 
     expect(shallowToJson(shallowOutput)).toMatchSnapshot()
-    expect(innerProps.productList).toEqual(productList)
+    expect(mountToJson(reactOutput)).toMatchSnapshot()
+    expect(innerProps.productList).toEqual([{
+      name: 'aaa',
+      price: 10,
+      selected: true
+    }])
+    expect(innerProps.totalPrice).toBe(10)
   })
 
-  it('should select a product', () => {
-
-    reactOutput.find('ul').childAt(0).simulate('click')
-
-    const actions = store.getActions()
-    expect(actions).toContainEqual({
-      product: {
-        name: 'aaa',
-        price: 10,
-        selected: true
-      },
-      type: 'PRODUCT_ACTION.SELECT_PRODUCT'
-    })
-  })
 })

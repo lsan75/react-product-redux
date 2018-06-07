@@ -1,0 +1,104 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AppList renders without crashing 1`] = `
+<AppPrice
+  dispatch={[Function]}
+  productList={
+    Array [
+      Object {
+        "name": "aaa",
+        "price": 10,
+        "selected": true,
+      },
+    ]
+  }
+  totalPrice={10}
+/>
+`;
+
+exports[`AppList renders without crashing 2`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <Connect(AppPrice)>
+    <AppPrice
+      dispatch={[Function]}
+      productList={
+        Array [
+          Object {
+            "name": "aaa",
+            "price": 10,
+            "selected": true,
+          },
+        ]
+      }
+      totalPrice={10}
+    >
+      <div
+        className="Wrapper"
+      >
+        <PriceHeader
+          totalPrice={10}
+        >
+          <article
+            className="TotalPrice"
+          >
+            <h2
+              className="TotalPrice__Title"
+            >
+              Total
+            </h2>
+            <span
+              className="TotalPrice__Value"
+            >
+              10
+               €
+            </span>
+          </article>
+        </PriceHeader>
+        <PriceList
+          products={
+            Array [
+              Object {
+                "name": "aaa",
+                "price": 10,
+                "selected": true,
+              },
+            ]
+          }
+        >
+          <ul
+            className="PriceList"
+          >
+            <li
+              className="PriceList__Item"
+              key="aaa"
+            >
+              <strong
+                className="PriceList__Item__Name"
+              >
+                aaa
+              </strong>
+              <span
+                className="PriceList__Item__Price"
+              >
+                10
+                 €
+              </span>
+            </li>
+          </ul>
+        </PriceList>
+      </div>
+    </AppPrice>
+  </Connect(AppPrice)>
+</Provider>
+`;
